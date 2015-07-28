@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MeuBancoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="publishers">
+    <Key>
+      <PropertyRef Name="pub_id" />
+    </Key>
+    <Property Name="pub_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pub_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="titles">
+    <Key>
+      <PropertyRef Name="title_id" />
+    </Key>
+    <Property Name="title_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pub_id" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_titles_titles">
+    <End Role="publishers" Type="Self.publishers" Multiplicity="1" />
+    <End Role="titles" Type="Self.titles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="publishers">
+        <PropertyRef Name="pub_id" />
+      </Principal>
+      <Dependent Role="titles">
+        <PropertyRef Name="pub_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MeuBancoModelStoreContainer">
+    <EntitySet Name="publishers" EntityType="Self.publishers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="titles" EntityType="Self.titles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_titles_titles" Association="Self.FK_titles_titles">
+      <End Role="publishers" EntitySet="publishers" />
+      <End Role="titles" EntitySet="titles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

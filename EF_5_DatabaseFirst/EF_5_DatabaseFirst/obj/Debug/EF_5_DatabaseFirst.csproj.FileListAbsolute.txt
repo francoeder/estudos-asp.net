@@ -10,3 +10,6 @@ c:\users\éder\documents\visual studio 2013\Projects\EF_5_DatabaseFirst\EF_5_Dat
 c:\users\éder\documents\visual studio 2013\Projects\EF_5_DatabaseFirst\EF_5_DatabaseFirst\obj\Debug\EF_5_DatabaseFirst.csprojResolveAssemblyReference.cache
 c:\users\éder\documents\visual studio 2013\Projects\EF_5_DatabaseFirst\EF_5_DatabaseFirst\obj\Debug\EF_5_DatabaseFirst.exe
 c:\users\éder\documents\visual studio 2013\Projects\EF_5_DatabaseFirst\EF_5_DatabaseFirst\obj\Debug\EF_5_DatabaseFirst.pdb
+C:\Users\Éder\Documents\Visual Studio 2013\Projects\estudos-aspnet\EF_5_DatabaseFirst\EF_5_DatabaseFirst\bin\Debug\EF_5_DatabaseFirst.exe.config
+C:\Users\Éder\Documents\Visual Studio 2013\Projects\estudos-aspnet\EF_5_DatabaseFirst\EF_5_DatabaseFirst\obj\Debug\EF_5_DatabaseFirst.exe
+C:\Users\Éder\Documents\Visual Studio 2013\Projects\estudos-aspnet\EF_5_DatabaseFirst\EF_5_DatabaseFirst\obj\Debug\EF_5_DatabaseFirst.pdb
